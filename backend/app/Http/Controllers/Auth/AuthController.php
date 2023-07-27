@@ -29,9 +29,11 @@ class AuthController extends Controller
 
         $res = [
             'user' => $user,
-            'token' => $token
+            'token' => $token,
+            'message' => 'Product Created Successfully!!'
         ];
-        return response($res, 201);
+
+        return response()->json($res, 201);
     }
 
     public function login(Request $request)
